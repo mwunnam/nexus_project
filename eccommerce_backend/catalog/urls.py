@@ -7,5 +7,5 @@ urlpatterns = [
     path('categories/', CategoryListCreateView.as_view(), name='categories-list-create'),
     path('categories/<int:pk>/', CategoryRetrieveUpdateDestroyView.as_view(), name='category-detail'),
     path('products/', ProductListCreateView.as_view(), name='products=list-create'),
-    path('produects/<int:pk>/', ProductRetrieveUpdateDestroyView.as_view(), name='prouduct-detail'),
+    path('products/<int:pk>/', ProductRetrieveUpdateDestroyView.as_view(), name='prouduct-detail'),
 ]
