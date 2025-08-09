@@ -16,5 +16,12 @@ class Product(models.Model):
     in_stock = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        indexes = [
+            models.Index(fields=['price']),
+            models.Index(fields=['category']),
+            models.Index(fields=['created_at']),
+        ]
+
     def __str__(self):
         return self.name
