@@ -106,6 +106,18 @@ WSGI_APPLICATION = 'eccommerce_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'JWT Authorization header using the Bearer scheme. Example: "Bearer {token}"',
+        }
+    },
+    'USE_SESSION_AUTH': False,  # Important for token-based auth
+}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
